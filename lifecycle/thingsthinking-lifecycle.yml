@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: https://pypi.org/project/semantha-sdk/
+versioning:
+  scheme: server-parallel-semver
+  current: 11.6.0
+  cadence: roughly every two weeks
+  note: >-
+    The semantha SDK is released in parallel with each new semantha server
+    version (typically every two weeks); customers are advised to use the same
+    SDK version as their server version. Version observed from the semantha-sdk
+    PyPI release history (11.6.0 on 2026-07-08).
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  note: >-
+    "Old" authentication methods (per-domain API key, JSON key file) are marked
+    legacy in the SDK docs in favour of OAuth2 client credentials / OpenID
+    Connect, but no formal deprecation/sunset policy page was found.
+sla:
+  url: null
+  note: >-
+    Data-security page cites "very high availability" from ISO 27001 data
+    centres; no numeric uptime SLA published.
+status_page: null
+deprecated_operations: []

@@ -1,0 +1,56 @@
+generated: '2026-07-21'
+method: searched
+source: https://pypi.org/project/semantha-sdk/
+docs: https://www.semantha.de/experten/
+summary: >-
+  Cross-cutting request/response semantics for the semantha REST API, captured
+  from the developer information page, the data-security page, and the
+  first-party Python SDK design guidelines.
+authentication:
+  style: OAuth2 client credentials (bearer token) / OpenID Connect; legacy per-domain API key
+  see: authentication/thingsthinking-authentication.yml
+base_path:
+  api_root: /api
+  server_pattern: https://<tenant>/tt-platform-server/api
+  note: >-
+    Each customer has a dedicated semantha server URL (server_url). The API is
+    multi-tenant by "domain"; most resources are nested under
+    /api/domains/{domain}/...
+resource_model:
+  style: RESTful; HTTP method maps to CRUD on nested resources
+  examples:
+    - GET /api/info
+    - GET /api/domains/{domain}/settings
+    - POST /api/domains/{domain}/referencedocuments
+    - DELETE /api/domains/{domain}/referencedocuments
+    - GET /api/currentuser/roles
+  sdk_mapping: >-
+    The Python SDK mirrors the URL structure onto fluent calls where the HTTP
+    method is the terminal call, e.g. GET /api/info -> api.info.get(); POST
+    /api/domains/<d>/referencedocuments -> api.domains("<d>").referencedocuments.post(file=...)
+statelessness:
+  processed_documents_persisted: false
+  note: >-
+    semantha does not store the processed documents and forgets the request and
+    its response upon completion (background knowledge/library entries aside).
+data_isolation:
+  per_customer: true
+  per_domain: true
+  encryption_at_rest: true
+  hosting: EU only; data-center ISO 27001 certified
+transport:
+  tls_only: true
+idempotency:
+  documented: false
+  note: No idempotency-key mechanism is documented in the developer or SDK material.
+pagination:
+  documented: false
+  note: No general cursor/offset pagination convention is documented publicly.
+error_envelope:
+  documented: false
+  note: >-
+    A public error/problem-type reference was not found (no OpenAPI captured).
+cross_links:
+  authentication: authentication/thingsthinking-authentication.yml
+  conformance: conformance/thingsthinking-conformance.yml
+  lifecycle: lifecycle/thingsthinking-lifecycle.yml

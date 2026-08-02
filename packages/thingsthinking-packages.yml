@@ -1,0 +1,27 @@
+generated: '2026-07-21'
+method: searched
+source: https://pypi.org/project/semantha-sdk/
+packages:
+  - language: python
+    registry: pypi
+    name: semantha-sdk
+    url: https://pypi.org/project/semantha-sdk/
+    install: pip install semantha-sdk
+    version: 11.6.0
+    requires_python: '>=3.11,<4'
+    official: true
+    description: >-
+      High-level REST client for the semantha semantic platform. Maps each
+      HTTP method onto a fluent Python call (GET /api/info -> api.info.get()).
+      Released in parallel with the semantha server (roughly every two weeks);
+      use the same SDK version as your server version.
+    author: Sebastian Weigelt <sebastian.weigelt@semantha.ai>
+    source_repository: https://github.com/semantha/semantha-python-client
+notes: >-
+  Only the first-party Python SDK (semantha-sdk) is published to a public
+  registry. The documentation references SDKs (plural) but no first-party
+  JavaScript/Java/.NET client was found on npm, Maven Central, NuGet, or
+  pkg.go.dev at enrichment time. The source repository listed on PyPI
+  (github.com/semantha/semantha-python-client) returned 404 at probe time
+  (likely moved/private after the Aleph Alpha acquisition); the package itself
+  is live and current.

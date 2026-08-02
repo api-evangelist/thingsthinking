@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+source: https://pypi.org/project/semantha-sdk/
+scheme: semver
+current_version: 11.6.0
+cadence: roughly every two weeks, in parallel with the semantha server release
+note: >-
+  The semantha REST API does not publish a standalone dated public changelog;
+  the first-party semantha-sdk (versioned in lockstep with the server) is the
+  closest public release signal. Entries below are recent SDK releases with
+  their PyPI upload dates. Semantics of each version track the corresponding
+  semantha server release.
+entries:
+  - version: 11.6.0
+    date: '2026-07-08'
+  - version: 11.5.0
+    date: '2026-06-17'
+  - version: 11.4.0
+    date: '2026-06-02'
+  - version: 11.3.0
+    date: '2026-05-21'
+  - version: 11.2.1
+    date: '2026-05-07'
+  - version: 11.2.0
+    date: '2026-05-07'
+  - version: 11.1.0
+    date: '2026-04-22'
+  - version: 10.10.0
+    date: '2026-03-12'
+  - version: 10.9.0
+    date: '2026-02-26'
+  - version: 10.6.0
+    date: '2026-02-02'

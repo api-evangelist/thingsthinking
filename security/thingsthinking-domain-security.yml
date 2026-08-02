@@ -1,0 +1,16 @@
+generated: '2026-07-21'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.semantha.de
+  https: true
+  tls_version: TLSv1.2
+  cert_expires: Sep  6 07:26:12 2026 GMT
+  hsts: false
+domains:
+- domain: semantha.de
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none

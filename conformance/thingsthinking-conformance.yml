@@ -1,0 +1,42 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.semantha.de/data-security/
+standards:
+  - id: gdpr
+    conforms: true
+    evidence: >-
+      Data-security page: "we work in a DSGVO-compliant manner"; data protection
+      agreements concluded with customers; data protection officer contact
+      published (privacy@semantha.net).
+  - id: iso27001
+    conforms: true
+    scope: hosting-provider
+    evidence: >-
+      Data-security page: software hosted exclusively in the EU on service
+      providers' data centres that are ISO 27001 certified. Note: the ISO 27001
+      certification is the hosting data centre's, not asserted as semantha's own
+      ISMS certificate.
+  - id: eu-data-residency
+    conforms: true
+    evidence: Software hosted exclusively on servers in the European Union.
+  - id: oauth2
+    conforms: true
+    evidence: OAuth2 client-credentials flow is the primary API authentication.
+  - id: openid-connect
+    conforms: true
+    evidence: OpenID Connect is the recommended authentication/authorization method.
+  - id: tls-encryption-in-transit
+    conforms: true
+    evidence: >-
+      HTTPS strictly enforced for UI and API; no unencrypted endpoints;
+      TLS policy reviewed and updated to remove weaker protocols.
+  - id: encryption-at-rest
+    conforms: true
+    evidence: All data within semantha's databases encrypted at rest.
+  - id: rfc9457-problem-details
+    conforms: unknown
+    evidence: No OpenAPI captured; error-envelope format not publicly documented.
+notes: >-
+  Assertions are drawn from the provider's published data-security page. No
+  SOC 2, PCI DSS, HIPAA, or FedRAMP claims were found. The Compliance pointer in
+  apis.yml references the data-security page as the published posture.

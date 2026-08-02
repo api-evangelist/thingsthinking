@@ -1,22 +1,117 @@
 aid: thingsthinking
 name: Thingsthinking
-description: Thingsthinking is a company surfaced as a portfolio company of earlybird and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Thingsthinking GmbH is a Karlsruhe, Germany-based semantic AI company and the
+  maker of semantha, an adaptive AI platform for text-driven business processes.
+  semantha applies semantic natural-language understanding to documents and
+  unstructured text for use cases such as contract and document analysis,
+  semantic comparison, enterprise search, requirements and specifications
+  analysis, classification and clustering, ESG report analysis, compliance
+  management, correspondence automation, and risk analysis in underwriting. The
+  platform is delivered as a comprehensive REST API with a first-party Python
+  SDK (semantha-sdk), authenticated via OAuth2 client credentials / OpenID
+  Connect (with a legacy per-domain API key), hosted exclusively in the EU and
+  operated in a GDPR/DSGVO-compliant manner. Thingsthinking was surfaced as a
+  portfolio company of Earlybird and has since been acquired by Aleph Alpha.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.semantha.de/wp-content/uploads/cropped-semantha_favicon_wordpress.png
 url: https://raw.githubusercontent.com/api-evangelist/thingsthinking/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - earlybird
+x-acquired-by: aleph-alpha
 x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Semantic AI
+- Natural Language Processing
+- Document Analysis
+- Enterprise Search
+- Contract Analysis
+- Text Analytics
+- Machine Learning
+- Compliance
+- REST API
+- Germany
+apis:
+- name: semantha REST API
+  description: >-
+    semantha's standardized RESTful web service for semantic processing of text
+    documents and structured data extraction. Resources are organized under
+    /api (info, domains/{domain}/referencedocuments, settings, roles,
+    currentuser) and are consumed out-of-the-box or via the first-party Python
+    SDK. The service is stateless per request (processed documents are not
+    persisted) and enforces HTTPS. The production API base is a per-tenant
+    semantha server URL of the form https://<tenant>/tt-platform-server/api.
+  humanURL: https://www.semantha.de/experten/
+  baseURL: https://www.semantha.de
+  properties:
+  - type: Authentication
+    url: authentication/thingsthinking-authentication.yml
+  - type: Conventions
+    url: conventions/thingsthinking-conventions.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: DomainSecurity
+  url: security/thingsthinking-domain-security.yml
+- type: Website
+  url: https://www.semantha.de/
+- type: DeveloperPortal
+  url: https://www.semantha.de/experten/
+- type: Documentation
+  url: https://pypi.org/project/semantha-sdk/
+- type: Blog
+  url: https://www.semantha.de/blog/
+- type: BlogRSS
+  url: https://www.semantha.de/feed/
+- type: Support
+  url: https://www.semantha.de/contact/
+- type: SignUp
+  url: https://www.semantha.de/request/
+- type: PrivacyPolicy
+  url: https://www.semantha.de/privacy-notice-and-terms-of-use/
+- type: TermsOfService
+  url: https://www.semantha.de/terms-conditions/
+- type: Packages
+  url: packages/thingsthinking-packages.yml
+- type: SDKs
+  url: packages/thingsthinking-packages.yml
+- type: Authentication
+  url: authentication/thingsthinking-authentication.yml
+- type: Conventions
+  url: conventions/thingsthinking-conventions.yml
+- type: Conformance
+  url: conformance/thingsthinking-conformance.yml
+- type: Compliance
+  url: https://www.semantha.de/data-security/
+- type: Lifecycle
+  url: lifecycle/thingsthinking-lifecycle.yml
+- type: ChangeLog
+  url: changelog/thingsthinking-changelog.yml
+- type: LLMsTxt
+  url: llms/thingsthinking-llms.txt
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 9
+  pass: local-v1

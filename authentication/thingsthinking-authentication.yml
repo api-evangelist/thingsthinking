@@ -1,0 +1,44 @@
+generated: '2026-07-21'
+method: searched
+source: https://pypi.org/project/semantha-sdk/
+docs: https://www.semantha.de/data-security/
+summary:
+  types: [oauth2, openIdConnect, apiKey]
+  api_key_in: [header]
+  oauth2_flows: [clientCredentials]
+  recommended: OpenID Connect via customer identity provider
+schemes:
+  - name: OAuth2ClientCredentials
+    type: oauth2
+    flow: clientCredentials
+    description: >-
+      Primary authentication. A domain administrator creates a client in the
+      Administration app (Client Administration) and downloads a
+      credentials.properties file containing client_id, client_secret and
+      token_url. The SDK exchanges these for a bearer token against the
+      tenant's token endpoint. server_url, client_id, client_secret and
+      token_url can also be supplied directly.
+    parameters: [server_url, client_id, client_secret, token_url]
+    sources: [https://pypi.org/project/semantha-sdk/]
+  - name: OpenIDConnect
+    type: openIdConnect
+    description: >-
+      semantha recommends integrating with the customer's existing identity
+      management system and using OpenID Connect for authentication and
+      authorization. Other means of authentication can be made available on
+      request.
+    sources: [https://www.semantha.de/data-security/]
+  - name: LegacyAPIKey
+    type: apiKey
+    in: header
+    description: >-
+      Legacy authentication (documented as "Old"). A per-domain API key grants
+      access to a fixed number of domains; supplied to the SDK via
+      login(server_url, key=...) or a JSON key file ({"API_Key", "server_url"}).
+      Access is scoped to the domains bound to the key.
+    sources: [https://pypi.org/project/semantha-sdk/, https://www.semantha.de/data-security/]
+transport:
+  tls_only: true
+  note: >-
+    Neither the user interface nor the API is accessible without encryption;
+    unencrypted endpoints are not provided.

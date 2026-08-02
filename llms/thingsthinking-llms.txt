@@ -1,0 +1,32 @@
+# Thingsthinking / semantha
+
+> Thingsthinking GmbH (Karlsruhe, Germany), acquired by Aleph Alpha, is the maker of semantha — an adaptive semantic AI platform for text-driven business processes. semantha applies semantic natural-language understanding to documents and unstructured text and is delivered as a comprehensive REST API with a first-party Python SDK.
+
+## About
+- semantha is used for contract and document analysis, semantic comparison, enterprise search, requirements and specifications analysis, classification and clustering, ESG report analysis, compliance management, correspondence automation, and risk analysis in underwriting.
+- The API is stateless per request (processed documents are not persisted), EU-hosted, GDPR/DSGVO-compliant, and HTTPS-only.
+- Authentication is OAuth2 client credentials / OpenID Connect, with a legacy per-domain API key. The API is multi-tenant by "domain".
+
+## APIs
+- [semantha REST API — developer information](https://www.semantha.de/experten/): standardized RESTful web service for semantic text processing; resources under /api (info, domains/{domain}/referencedocuments, settings, roles, currentuser). Production base: https://<tenant>/tt-platform-server/api
+
+## SDKs
+- [semantha-sdk (Python)](https://pypi.org/project/semantha-sdk/): first-party high-level REST client. `pip install semantha-sdk`. Released in parallel with the server (~every two weeks); use the same SDK version as your server version.
+
+## Docs
+- [Data security](https://www.semantha.de/data-security/): EU hosting, ISO 27001 data centres, GDPR, encryption in transit/at rest, per-customer/per-domain isolation.
+- [Blog](https://www.semantha.de/blog/)
+- [Request a demo / API access](https://www.semantha.de/request/)
+- [Contact](https://www.semantha.de/contact/)
+
+## Repo artifacts
+- [Authentication profile](https://raw.githubusercontent.com/api-evangelist/thingsthinking/refs/heads/main/authentication/thingsthinking-authentication.yml)
+- [API conventions](https://raw.githubusercontent.com/api-evangelist/thingsthinking/refs/heads/main/conventions/thingsthinking-conventions.yml)
+- [Conformance](https://raw.githubusercontent.com/api-evangelist/thingsthinking/refs/heads/main/conformance/thingsthinking-conformance.yml)
+- [Packages / SDKs](https://raw.githubusercontent.com/api-evangelist/thingsthinking/refs/heads/main/packages/thingsthinking-packages.yml)
+- [Lifecycle](https://raw.githubusercontent.com/api-evangelist/thingsthinking/refs/heads/main/lifecycle/thingsthinking-lifecycle.yml)
+- [Changelog](https://raw.githubusercontent.com/api-evangelist/thingsthinking/refs/heads/main/changelog/thingsthinking-changelog.yml)
+
+## Legal
+- [Privacy notice and terms of use](https://www.semantha.de/privacy-notice-and-terms-of-use/)
+- [Terms & conditions](https://www.semantha.de/terms-conditions/)
