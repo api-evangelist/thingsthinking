@@ -13,6 +13,17 @@ description: >-
   Connect (with a legacy per-domain API key), hosted exclusively in the EU and
   operated in a GDPR/DSGVO-compliant manner. Thingsthinking was surfaced as a
   portfolio company of Earlybird and has since been acquired by Aleph Alpha.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
