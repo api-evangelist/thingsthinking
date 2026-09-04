@@ -34,6 +34,7 @@ accessModel:
   confidence: medium
   source:
   - authentication
+  - {url: 'https://www.semantha.de/', status: 301, note: 'declared website redirects to https://aleph-alpha.com/ — a different registrable domain (semantha.de -> aleph-alpha.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)'}
   generated: '2026-07-22'
   method: derived
 image: https://www.semantha.de/wp-content/uploads/cropped-semantha_favicon_wordpress.png
