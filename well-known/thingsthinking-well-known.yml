@@ -1,7 +1,13 @@
 generated: '2026-07-21'
 method: searched
 host: https://www.semantha.de
-documents:
+notes: No /.well-known/ discovery documents are published on the marketing host. The API is per-tenant
+  (https://<tenant>/tt-platform-server/api) and OpenID Connect discovery, if present, lives on the customer's
+  own identity provider rather than on www.semantha.de. Recorded for auditability; no WellKnown pointer
+  wired because no catalog is present.
+hosts:
+- host: https://www.semantha.de
+  documents:
   - path: /.well-known/security.txt
     status: 404
   - path: /.well-known/openid-configuration
@@ -12,9 +18,8 @@ documents:
     status: 404
   - path: /.well-known/ai-plugin.json
     status: 404
-notes: >-
-  No /.well-known/ discovery documents are published on the marketing host. The
-  API is per-tenant (https://<tenant>/tt-platform-server/api) and OpenID Connect
-  discovery, if present, lives on the customer's own identity provider rather
-  than on www.semantha.de. Recorded for auditability; no WellKnown pointer wired
-  because no catalog is present.
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
