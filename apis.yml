@@ -57,7 +57,7 @@ tags:
 - Enterprise Search
 - Contract Analysis
 - Text Analytics
-- Machine-Learning
+- Machine Learning
 - Compliance
 - REST API
 - Germany
@@ -73,6 +73,7 @@ tags_raw:
 - Compliance
 - REST API
 - Germany
+- Machine-Learning
 apis:
 - name: semantha REST API
   description: >-
@@ -84,7 +85,6 @@ apis:
     persisted) and enforces HTTPS. The production API base is a per-tenant
     semantha server URL of the form https://<tenant>/tt-platform-server/api.
   humanURL: https://www.semantha.de/experten/
-  baseURL: https://www.semantha.de
   properties:
   - type: Authentication
     url: authentication/thingsthinking-authentication.yml
